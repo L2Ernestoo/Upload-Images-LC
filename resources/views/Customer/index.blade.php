@@ -20,7 +20,7 @@
             <td>{{$c->last_name}}</td>
             <td>{{$c->birth_date}}</td>
             <td>{{$c->email}}</td>
-            <td><img src="/storage/{{$c->path_avatar}}" alt="{{$c->first_name}} Avatar's" width="100px" height="100px"></td>
+            <td><img src="{{asset('storage')}}/{{$c->path_avatar}}" alt="{{$c->first_name}} Avatar's" width="100px" height="100px"></td>
         </tr>
         @endforeach
         </tbody>
