@@ -20,13 +20,13 @@ class CustomerController extends Controller
     public function store(Request $request){
 
         $avatar = $request->file('avatar');
-        $path = $avatar->store('public/avatars');
+        $path = $avatar->store('avatars','public');
         $customer = new Customers;
         $customer->first_name = $request->first_name;
         $customer->last_name = $request->last_name;
         $customer->birth_date = $request->birth_date;
         $customer->email = $request->email;
-        $customer->path_avatar = Str::substr($path, 7);
+        $customer->path_avatar = $path;
         $customer->save();
 
         return redirect()->route('customer.index');

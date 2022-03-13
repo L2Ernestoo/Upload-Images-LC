@@ -14,7 +14,7 @@ This is a Simple web application to upload and view images.
 - Crete a new key (php artisan key:generate)
 - Create a Schema
 - After set your database in the .env file run migrations (php artisan migrate)
-
+- Create symbolic link to images (php artisan link:generate)
 And that's it!
 
 - /customers
